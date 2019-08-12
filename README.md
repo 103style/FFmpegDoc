@@ -42,3 +42,47 @@ NDK : r15c
   
 编译完成，会在`$HOME/x264_lib/` `e.g. /home/103style/x264_lib/`目录下生成对应平台的文件
 
+
+### 编译FFmpeg
+
+### 下载源代码到`$HOME`目录
+[https://github.com/FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg)
+```
+cd $HOME
+git clone https://github.com/FFmpeg/FFmpeg.git
+```
+
+---
+
+### 切换最新的release分支
+```
+cd FFmpeg
+git branch -a
+```
+选择最新的 `4.2` 版本
+```
+git checkout -b remotes/origin/release/4.2
+```
+
+---
+
+### 修改FFmpeg的configure
+>下载FFmpeg源代码之后，首先需要对源代码中的configure文件进行修改。由于编译出来的动态库文件名的版本号在.so之后（例如“libavcodec.so.5.100.1”），而android平台不能识别这样文件名，所以需要修改这种文件名。
+
+在`configure`文件中找到下面几行代码：
+```
+SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
+LIB_INSTALL_EXTRA_CMD='$$(RANLIB)"$(LIBDIR)/$(LIBNAME)"'
+SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
+SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR)$(SLIBNAME)'
+```
+替换为下面内容就可以了：
+```
+SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(FULLNAME)-$(LIBMAJOR)$(SLIBSUF)'
+LIB_INSTALL_EXTRA_CMD='$$(RANLIB)"$(LIBDIR)/$(LIBNAME)"'
+SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
+SLIB_INSTALL_LINKS='$(SLIBNAME)
+```
+
+---
+
