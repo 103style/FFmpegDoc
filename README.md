@@ -1,5 +1,13 @@
 # FFmpegDoc
 
+###　笔者环境
+```
+Ubutun : 16.04
+NDK : r15c
+```
+
+
+
 * 克隆到 `$HOME` 目录，`(e.g.  /home/103style/)`
 
 * 配置`NDK`环境变量 `ANDROID_NDK_ROOT`
