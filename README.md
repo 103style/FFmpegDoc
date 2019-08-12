@@ -43,6 +43,38 @@ NDK : r15c
   
 编译完成，会在`$HOME/x264_lib/` `e.g. /home/103style/x264_lib/`目录下生成对应平台的文件
 
+
+如果提示以下内容：
+```
+No working C compiler found.
+Makefile:3: config.mak: 没有那个文件或目录
+./configure
+Found no assembler
+Minimum version is nasm-2.13
+If you really want to compile without asm, configure with --disable-asm.
+Makefile:332: recipe for target 'config.mak' failed
+```
+则需要更新 `nasm`
+```
+nasm -v
+```
+如果提示 version < 2.13，则先卸载 `nasm`，如果提示找不到命令,则进行安装。
+卸载命令：
+```
+sudo apt-get --purge remove nasm
+```
+
+然后安装
+```
+cd $HOME && \
+wget https://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.bz2 && \
+tar xjvf nasm-2.14.02.tar.bz2 && \
+cd nasm-2.14.02 && sudo bash ./autogen.sh && sudo PATH="/usr/bin:$PATH" sudo ./configure --prefix="$HOME/ffmpeg_build" --bindir="/usr/bin" && sudo make -j4 && sudo make install
+```
+
+
+
+
 ---
 
 ### 编译FFmpeg
