@@ -23,7 +23,8 @@ NDK : r15c
   ```
 
 ### 安装依赖
-[GetDependencies](https://github.com/103style/FFmpegDoc/blob/master/GetDependencies.md)
+
+安装指引:[GetDependencies](https://github.com/103style/FFmpegDoc/blob/master/GetDependencies.md)
 
 ---
 
