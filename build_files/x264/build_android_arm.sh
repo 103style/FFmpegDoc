@@ -17,7 +17,7 @@ function build_one
   --enable-static \
   --enable-pic \
   --host=arm-linux \
-  --cross-prefix=$CROSS_PREFIX\
+  --cross-prefix=$CROSS_PREFIX \
   --sysroot=$PLATFORM
 
   make clean

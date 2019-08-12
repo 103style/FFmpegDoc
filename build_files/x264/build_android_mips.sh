@@ -18,7 +18,6 @@ function build_one
   --host=mipsel-linux \
   --cross-prefix=$CROSS_PREFIX \
   --sysroot=$PLATFORM \
-  --disable-asm
 
   make clean
   make -j4

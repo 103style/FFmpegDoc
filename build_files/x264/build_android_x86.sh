@@ -16,7 +16,6 @@ function build_one
   --enable-static \
   --enable-pic \
   --host=i686-linux \
-  --disable-asm \
   --cross-prefix=$CROSS_PREFIX \
   --sysroot=$PLATFORM
 
