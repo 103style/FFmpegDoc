@@ -21,6 +21,14 @@ NDK : r15c
   ```
   export ANDROID_NDK_ROOT=/home/103style/android-ndk-r15c
   ```
+  
+  然后注销系统，重新登录
+  
+  检查`ANDROID_NDK_ROOT`是否可用
+  ```
+  cd $ANDROID_NDK_ROOT
+  ```
+  看是否切换到对应的`NDK`路径.
 
 ### 安装依赖
 
