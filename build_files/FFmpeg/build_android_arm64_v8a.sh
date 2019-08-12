@@ -4,7 +4,7 @@
 
 cd $HOME/FFmpeg
 
-NDK=$HOME/android-ndk-r15c
+NDK=$ANDROID_NDK_ROOT
 PLATFORM=$NDK/platforms/android-21/arch-arm64/
 TOOLCHAIN=$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64
 X264DIR=$HOME/x264_lib

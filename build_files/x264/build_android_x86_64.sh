@@ -2,7 +2,7 @@
 
 cd $HOME/x264
 
-NDK=/home/xiaoke/android-ndk-r15c
+NDK=$ANDROID_NDK_ROOT
 PLATFORM=$NDK/platforms/android-21/arch-x86_64/
 TOOLCHAIN=$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64
 X264DIR=$HOME/x264_lib 
