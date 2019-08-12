@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME/x264
+cd $HOME/FFmpegDoc/x264
 
 NDK=$ANDROID_NDK_ROOT
 PLATFORM=$NDK/platforms/android-21/arch-arm64/
