@@ -6,6 +6,8 @@ Ubutun : 16.04
 NDK : r15c
 ```
 
+---
+
 ### 下载文件
 
 * 克隆到 `$HOME` 目录，`(e.g.  /home/103style/)`
@@ -23,8 +25,9 @@ NDK : r15c
 ### 安装依赖
 [GetDependencies](https://github.com/103style/FFmpegDoc/blob/master/GetDependencies.md)
 
+---
 
-### 编译　x264
+### 编译 x264
 * 全平台编译
   ```
   cd ./build_files/x264/
