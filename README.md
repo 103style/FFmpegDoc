@@ -29,6 +29,8 @@ NDK : r15c
   cd $ANDROID_NDK_ROOT
   ```
   看是否切换到对应的`NDK`路径.
+  
+---
 
 ### 安装依赖
 
