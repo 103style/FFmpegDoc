@@ -42,6 +42,7 @@ NDK : r15c
   
 编译完成，会在`$HOME/x264_lib/` `e.g. /home/103style/x264_lib/`目录下生成对应平台的文件
 
+---
 
 ### 编译FFmpeg
 
