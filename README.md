@@ -72,6 +72,10 @@ tar xjvf nasm-2.14.02.tar.bz2 && \
 cd nasm-2.14.02 && sudo bash ./autogen.sh && sudo PATH="/usr/bin:$PATH" sudo ./configure --prefix="$HOME/ffmpeg_build" --bindir="/usr/bin" && sudo make -j4 && sudo make install
 ```
 
+然后检查 `nasm` 版本
+```
+nasm -v
+```
 
 
 
